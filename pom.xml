@@ -2,21 +2,32 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.github.wppli</groupId>
-  <artifactId>email-qq-spring-boot-starter</artifactId>
+  <artifactId>email-spring-boot-starter</artifactId>
   <version>1.1</version>
   <packaging>jar</packaging>
-  <name>${project.gitee.name}</name>
-  <description>${project.gitee.name}</description>
-  <!--  https://gitee.com/li&#45;&#45;jiaqiang/encrypt-spring-boot-starter -->
-  <url>${project.gitee.url}/${project.gitee.name}</url>
+  <name>${project.git.name}</name>
+  <description>${project.git.name}</description>
+  <url>${project.git.url}/${project.git.name}</url>
+
+  <groupId>io.github.wppli</groupId>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.gitee.url>https://gitee.com/li--jiaqiang</project.gitee.url>
-    <project.gitee.name>email-springboot</project.gitee.name>
-    <project.gitee.username>li--jiaqiang</project.gitee.username>
+    <project.git.url>https://github.com/wppLi</project.git.url>
+    <project.git.name>email-springboot</project.git.name>
+    <project.git.username>wppLi</project.git.username>
+    <project.git.type>github</project.git.type>
   </properties>
+
+<!--  <groupId>io.gitee.li&#45;&#45;jiaqiang</groupId>-->
+
+<!--  <properties>-->
+<!--    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+<!--    <project.git.url>https://gitee.com/li&#45;&#45;jiaqiang</project.git.url>-->
+<!--    <project.git.name>email-springboot</project.git.name>-->
+<!--    <project.git.username>li&#45;&#45;jiaqiang</project.git.username>-->
+<!--    <project.git.type>gitee</project.git.type>-->
+<!--  </properties>-->
 
 
   <licenses>
@@ -28,8 +39,8 @@
 
   <developers>
     <developer>
-      <id>io.github.wppli</id>
-      <name>https://github.com/wppLi</name>
+      <id>${groupId}</id>
+      <name>${project.git.url}</name>
       <email>lijiaqiang1024@163.com</email>
       <roles>
         <role>Project Manager</role>
@@ -38,10 +49,10 @@
     </developer>
   </developers>
   <scm>
-    <connection>${project.gitee.url}/${project.gitee.name}.git</connection>
-    <developerConnection>scm:git:ssh://git@gitee.com:${project.gitee.username}/${project.gitee.name}.git
+    <connection>${project.git.url}/${project.git.name}.git</connection>
+    <developerConnection>scm:git:ssh://git@${project.git.type}.com:${project.git.username}/${project.git.name}.git
     </developerConnection>
-    <url>${project.gitee.url}/${project.gitee.name}</url>
+    <url>${project.git.url}/${project.git.name}</url>
   </scm>
 
   <parent>
@@ -174,7 +185,7 @@
         <version>1.5</version>
         <configuration>
           <executable>D:\soft\Gpg\GnuPG\bin\gpg.exe</executable>
-          <keyname>${project.gitee.username}</keyname>
+          <keyname>${project.git.username}</keyname>
         </configuration>
         <executions>
           <execution>
