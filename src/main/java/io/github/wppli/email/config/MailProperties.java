@@ -40,7 +40,7 @@ public class MailProperties {
     /** 注意不是真正的密码，而是申请到的授权码 */
     private String password = "hodmnimzeejrdiej";
     /** 端口号465或587 */
-    private int port = 587;
+    private int port = 465;
     /** 默认的邮件编码为UTF-8 */
     private String defaultEncoding = "UTF-8";
     /** 其他属性 */

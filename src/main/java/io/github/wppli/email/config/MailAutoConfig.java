@@ -18,7 +18,7 @@ public class MailAutoConfig {
     public JavaMailSender getJavaMailSender(MailProperties mailProperties) {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
         mailSender.setHost(mailProperties.getHost());
-        mailSender.setPort(587);
+        mailSender.setPort(mailProperties.getPort());
         mailSender.setUsername(mailProperties.getUsername());
         mailSender.setPassword(mailProperties.getPassword());
 
