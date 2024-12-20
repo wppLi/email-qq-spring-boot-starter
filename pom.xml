@@ -9,25 +9,25 @@
   <description>${project.git.name}</description>
   <url>${project.git.url}/${project.git.name}</url>
 
-  <groupId>io.github.wppli</groupId>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.git.url>https://github.com/wppLi</project.git.url>
-    <project.git.name>email-springboot</project.git.name>
-    <project.git.username>wppLi</project.git.username>
-    <project.git.type>github</project.git.type>
-  </properties>
-
-<!--  <groupId>io.gitee.li&#45;&#45;jiaqiang</groupId>-->
+<!--  <groupId>io.github.wppli</groupId>-->
 
 <!--  <properties>-->
 <!--    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
-<!--    <project.git.url>https://gitee.com/li&#45;&#45;jiaqiang</project.git.url>-->
+<!--    <project.git.url>https://github.com/wppLi</project.git.url>-->
 <!--    <project.git.name>email-springboot</project.git.name>-->
-<!--    <project.git.username>li&#45;&#45;jiaqiang</project.git.username>-->
-<!--    <project.git.type>gitee</project.git.type>-->
+<!--    <project.git.username>wppLi</project.git.username>-->
+<!--    <project.git.type>github</project.git.type>-->
 <!--  </properties>-->
+
+  <groupId>io.gitee.li--jiaqiang</groupId>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.git.url>https://gitee.com/li--jiaqiang</project.git.url>
+    <project.git.name>email-springboot</project.git.name>
+    <project.git.username>li--jiaqiang</project.git.username>
+    <project.git.type>gitee</project.git.type>
+  </properties>
 
 
   <licenses>
