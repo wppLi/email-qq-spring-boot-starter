@@ -27,6 +27,14 @@ public interface IEmailService {
     void sendText(String name, String form, String to, String subject, String content);
 
     /**
+     * 普通邮件发送
+     *
+     * @param to      发送对象
+     * @param content 内容
+     */
+    void sendText(String to, String content);
+
+    /**
      * Html邮件发送
      *
      * @param form    发送人

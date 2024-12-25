@@ -33,6 +33,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "io.github.wppli.email", ignoreInvalidFields = true)
 public class MailProperties {
+    private String softwareName = "io.github.wppLi";
+    private String subject = "登录验证码";
     /** SMTP 服务器地址 */
     private String host = "smtp.qq.com";
     /** 发送者邮箱 */
@@ -87,6 +89,22 @@ public class MailProperties {
     }
     public void setProperties(Properties properties) {
         this.properties = properties;
+    }
+
+    public String getSoftwareName() {
+        return softwareName;
+    }
+
+    public void setSoftwareName(String softwareName) {
+        this.softwareName = softwareName;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
     public static class Properties {

@@ -1,6 +1,7 @@
 package io.github.wppli.email.domain.service;
 
 import cn.hutool.core.collection.CollectionUtil;
+import io.github.wppli.email.config.MailProperties;
 import io.github.wppli.email.domain.IEmailService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +27,10 @@ public class EmailService implements IEmailService, Serializable {
     private final static String REGEX = ",";
 
     private final JavaMailSender javaMailSender;//注入邮件工具类
-    public EmailService(JavaMailSender javaMailSender) {
+    private final MailProperties mailProperties;
+    public EmailService(JavaMailSender javaMailSender, MailProperties mailProperties) {
         this.javaMailSender = javaMailSender;
+        this.mailProperties = mailProperties;
     }
 
     @Override
@@ -73,7 +76,7 @@ public class EmailService implements IEmailService, Serializable {
 
     @Override
     public void sendText(String form, String to, String subject, String content) {
-        this.send(EMAIL_NAME, form, to, subject, content, false, null, null, null);
+        this.send(mailProperties.getSoftwareName(), form, to, subject, content, false, null, null, null);
     }
 
     @Override
@@ -82,8 +85,13 @@ public class EmailService implements IEmailService, Serializable {
     }
 
     @Override
+    public void sendText(String to, String content) {
+        this.send(mailProperties.getSoftwareName(), mailProperties.getUsername(), to, mailProperties.getSubject(), content, false, null, null, null);
+    }
+
+    @Override
     public void sendHtml(String form, String to, String subject, String content) {
-        this.send(EMAIL_NAME, form, to, subject, content, true, null, null, null);
+        this.send(mailProperties.getSoftwareName(), form, to, subject, content, true, null, null, null);
     }
 
 
